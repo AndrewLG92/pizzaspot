@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/storage/v1/object/public/Pizzas/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'https://cwigkrmgtrehmfpfnrds.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/public/beverages/**',
+      },
     ],
   }
 };
