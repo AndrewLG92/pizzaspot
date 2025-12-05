@@ -3,13 +3,13 @@
 import Image from 'next/image';
 import { supabase } from '@/lib/supabaseclient';
 import { useEffect, useState } from 'react';
-import { useCart } from '@/hooks/useCart';
+//import { useCart } from '@/hooks/useCart';
 import { Pizza } from "@/types";
 
 
 export default function MenuPage() {
   const [pizzas, setPizzas] = useState<Pizza[]>([]);
-  const { addToCart, cart, total } = useCart();
+  //const { addToCart, cart, total } = useCart();
 
   useEffect(() => {
     async function fetchPizzas() {
@@ -43,26 +43,11 @@ export default function MenuPage() {
                 <p className="card-text text-muted flex-grow-1">{pizza.description}</p>
                 <div className="d-flex justify-content-between align-items-center mt-3">
                   <span className="fw-bold">${pizza.price.toFixed(2)}</span>
-                  <button 
-                    className="btn btn-danger" 
-                    onClick={() => addToCart({
-                      id: pizza.id,
-                      name: pizza.name,
-                      price: pizza.price,
-                      quantity: 1, // 👈 must include quantity
-                      image: pizza.image,
-                    })}>
-                      Add to Cart
-                  </button>
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-      <div className="mt-5">
-        <h3>Cart Total: ${total.toFixed(2)}</h3>
-        <p>Items in Cart: {cart.length}</p>
       </div>
     </main>
   );
