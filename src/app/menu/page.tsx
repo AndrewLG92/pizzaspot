@@ -11,14 +11,23 @@ export default function MenuPage() {
   const [pizzas, setPizzas] = useState<Pizza[]>([]);
   //const { addToCart, cart, total } = useCart();
 
+  // useEffect(() => {
+  //   async function fetchPizzas() {
+  //     const {data,error} = await supabase.from('pizzas').select('*');
+  //     if(error) console.error('Error fetching pizzas: ', error);
+  //     else setPizzas(data);
+  //   }
+  //   fetchPizzas();
+  // }, []);
+
   useEffect(() => {
-    async function fetchPizzas() {
-      const {data,error} = await supabase.from('pizzas').select('*');
-      if(error) console.error('Error fetching pizzas: ', error);
-      else setPizzas(data);
+    async function load() {
+      const res = await fetch("/api/pizzas");
+      const data = await res.json();
+      setPizzas(data);
     }
-    fetchPizzas();
-  }, []);
+    load();
+  },[]);
   
   console.log('Pizzas:', pizzas);
 
