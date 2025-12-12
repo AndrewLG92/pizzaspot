@@ -47,3 +47,37 @@ a {
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
 }
+
+/* MENU TABS */
+.tabs {
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  border-bottom: thin solid white;
+}
+
+.tab-item {
+  padding: 20px;
+  margin: 0 auto;
+  border-top: thin solid white;
+  border-left: thin solid white;
+  border-right: thin solid white;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  background-color: white;
+  color: black;
+  position: relative;
+  top: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+}
+
+.tab-item.active {
+  position: relative;
+  top: 0;
+}
+
+.tab-item:hover {
+  position: relative;
+  top:0;
+}
