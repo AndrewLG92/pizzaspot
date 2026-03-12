@@ -30,61 +30,26 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <Link className="navbar-brand" href="/">🍕 PizzaSpot</Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#darkDropDown"
-          aria-controls="darkDropDown"
-          aria-expanded="false"
-          aria-label="Toggle Navigation"
-        >
-        </button>
-
-        <div className="collapse navbar-collapse" id="darkDropDown">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item dropdown">
-              <button 
-                className="btn btn-dark"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i className="bi bi-list fs-3"></i>
-              </button>
-              <ul
-                className="dropdown-menu dropdown-menu-dark"
-              >
-                {['/', '/menu', '/about', '/contact'].map((path) => (
-                
-                  <li key={path}>
-                    <Link
-                      href={path}
-                      className={`dropdown-item ${pathname === path ? 'active' : ''}`}
-                    >
-                      {path === '/' ? 'Home' : path.replace('/', '').replace(/^./, (s) => s.toUpperCase())}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            
-            {/* <button
-              className={`nav-link ${logoutbtn ? '' : 'd-none'}`}
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-            >
-              Logout
-            </button> */}
-            
+        
+        <div className="dropdown" data-bs-theme="dark">
+          <button
+            className="btn btn-dark"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            <i className="bi bi-list fs-3"></i>
+          </button>
+          <ul className="dropdown-menu">
+            {['/', '/menu', '/about', '/contact'].map((path) => (
+              <li key={path}>
+                <Link
+                  href={path}
+                  className={`dropdown-item ${pathname === path ? 'active' : ''}`}
+                >
+                  {path === '/' ? 'Home' : path.replace('/', '').replace(/^./, (s) => s.toUpperCase())}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

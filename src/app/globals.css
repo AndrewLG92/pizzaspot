@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border-warning: rgba(255,193,7);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,18 +54,20 @@ a {
   overflow: hidden;
   display: flex;
   text-align: center;
-  border-bottom: thin solid white;
+  justify-content: center;
+  border-bottom: thick solid var(--border-warning);
 }
 
 .tab-item {
   padding: 20px;
-  margin: 0 auto;
-  border-top: thin solid white;
-  border-left: thin solid white;
-  border-right: thin solid white;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
-  background-color: white;
+  width: 200px;
+  margin: 0 20px 0 20px;
+  border-top: thin solid var(--border-warning);
+  border-left: thin solid var(--border-warning);
+  border-right: thin solid var(--border-warning);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  /*background-color: white;*/
   color: black;
   position: relative;
   top: 30px;

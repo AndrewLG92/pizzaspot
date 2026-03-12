@@ -1,4 +1,6 @@
 // src/types/index.ts
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
+
 export interface Pizza {
   id: number;            // matches bigint in DB
   name: string;
@@ -8,6 +10,28 @@ export interface Pizza {
   image?: string;
   category?: string;
   created_at?: string;
+}
+
+export interface Beverage {
+  id: number;            // matches bigint in DB
+  name: string;
+  description?: string;
+  category?: string;
+  size_options: Json | null;
+  image_url?: string;
+  is_available: boolean;
+  created_at?: string;
+}
+
+export interface Snack {
+  id: number;
+  name: string;
+  description?: string;
+  category?: string;
+  image_url?: string;
+  is_available: boolean;
+  size_options: Json | null;
+  created_at: string;
 }
 
 export interface CartItemFromDB {
