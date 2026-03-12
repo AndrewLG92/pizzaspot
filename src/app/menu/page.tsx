@@ -1,7 +1,7 @@
 'use client';
 
 //import { useCart } from '@/hooks/useCart';
-import { act, useState } from "react";
+import { useState } from "react";
 import Pizzas from "../components/Pizzas";
 import Beverages from "../components/Beverages";
 import Snacks from "../components/Snacks";

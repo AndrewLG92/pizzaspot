@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapClient from "./components/BootstrapClient";
+import Footer from '@/app/components/Footer';
 
 import Navbar from './components/Navbar';
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <BootstrapClient />
+        <Footer />
       </body>
     </html>
   );

@@ -41,13 +41,13 @@ export default function Navbar() {
             <i className="bi bi-list fs-3"></i>
           </button>
           <ul className="dropdown-menu">
-            {['/', '/menu', '/about', '/contact'].map((path) => (
+            {['/', '/menu', '/about-us', '/contact'].map((path) => (
               <li key={path}>
                 <Link
                   href={path}
                   className={`dropdown-item ${pathname === path ? 'active' : ''}`}
                 >
-                  {path === '/' ? 'Home' : path.replace('/', '').replace(/^./, (s) => s.toUpperCase())}
+                  {path === '/' ? 'Home' : path.replace('/', '').replace('-', ' ').replace(/^./, (s) => s.toUpperCase())}
                 </Link>
               </li>
             ))}
