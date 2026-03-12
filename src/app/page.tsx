@@ -1,15 +1,15 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-
 import Hero from '@/app/components/Hero';
+import Footer from '@/app/components/Footer';
 
 export default function Home() {
-  const router = useRouter();
+  
 
   return (
     <main>
       <Hero />
+      <Footer />
     </main>
   );
 }

@@ -55,18 +55,15 @@ a {
   display: flex;
   text-align: center;
   justify-content: center;
-  border-bottom: thick solid var(--border-warning);
+  border-bottom: thin solid var(--border-warning);
 }
 
 .tab-item {
   padding: 20px;
   width: 200px;
   margin: 0 20px 0 20px;
-  border-top: thin solid var(--border-warning);
-  border-left: thin solid var(--border-warning);
-  border-right: thin solid var(--border-warning);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border: thin solid var(--border-warning);
+  border-radius: 50% 50% 0 0;
   /*background-color: white;*/
   color: black;
   position: relative;
