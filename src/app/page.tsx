@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className="container text-center">
+    <main>
       <Hero />
     </main>
   );

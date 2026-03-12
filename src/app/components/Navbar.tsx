@@ -33,9 +33,10 @@ export default function Navbar() {
         
         <div className="dropdown" data-bs-theme="dark">
           <button
-            className="btn btn-dark"
+            className="btn btn-dark dropdow-toggle"
             type="button"
             data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
             <i className="bi bi-list fs-3"></i>
           </button>
