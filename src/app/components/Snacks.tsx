@@ -31,7 +31,7 @@ export default function Snacks() {
                     />
                     <div className="card-body d-flex flex-column">
                         <h5 className="card-title">{snack.name}</h5>
-                        <p className="card-text text-muted flex-grow-1">{snack.description}</p>
+                        <p className="card-text text-muted grow">{snack.description}</p>
                     </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ export default function Pizzas() {
     },[]);
 
     return (
-        <div className="container mt-4">
+        <div className="container mt-4 overflow-hidden">
             <div className="row">
                 {pizzas.map((pizza) => (
                 <div className="col-md-6 col-lg-4 mb-4" key={pizza.id}>
@@ -33,7 +33,7 @@ export default function Pizzas() {
                     />
                     <div className="card-body d-flex flex-column">
                         <h5 className="card-title">{pizza.name}</h5>
-                        <p className="card-text text-muted flex-grow-1">{pizza.description}</p>
+                        <p className="card-text text-muted grow">{pizza.description}</p>
                         <div className="d-flex justify-content-between align-items-center mt-3">
                         <span className="fw-bold">${pizza.price.toFixed(2)}</span>
                         </div>
